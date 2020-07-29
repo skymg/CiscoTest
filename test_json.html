@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- 不解析标签,原样输出 -->
+<h1>dsf</h1>
+<pre id="songReqJson"></pre>
+<h2>sfsdf</h2>
+<script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+
+<script>
+var songResJson = {
+"service": "ALL",
+"qt": 581,
+"content": {
+"answer": {
+"song": "如果缘只到遇见",
+"album": "如果缘只到遇见",
+"artist": "吴奇隆 严艺丹",
+"pic_url": "http://p1.music.126.net/-u3WgIXsFNCW7d8Jy7pCEA==/5921969627395387.jpg"
+},
+"scene": "music"
+}
+}
+//歌曲场景
+$("#songReqJson").text(JSON.stringify(songResJson, null, 2));
+/*
+JSON.stringify() 方法用于将 JavaScript 值转换为 JSON 字符串。
+语法:
+JSON.stringify(value[, replacer[, space]])
+参数说明：
+
+value:
+必需， 要转换的 JavaScript 值（通常为对象或数组）。
+
+replacer:
+可选。用于转换结果的函数或数组。
+
+如果 replacer 为函数，则 JSON.stringify 将调用该函数，并传入每个成员的键和值。使用返回值而不是原始值。如果此函数返回 undefined，则排除成员。根对象的键是一个空字符串：""。
+
+如果 replacer 是一个数组，则仅转换该数组中具有键值的成员。成员的转换顺序与键在数组中的顺序一样。当 value 参数也为数组时，将忽略 replacer 数组。
+
+space:
+可选，文本添加缩进、空格和换行符，如果 space 是一个数字，则返回值文本在每个级别缩进指定数目的空格，如果 space 大于 10，则文本缩进 10 个空格。space 有可以使用非数字，如：\t。
+*/
+</script>
+</body>
+</html>
